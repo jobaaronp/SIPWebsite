@@ -1,35 +1,42 @@
+import sipActivity1 from '../assets/SIP Activity 1.jpg';
+import sipActivity2 from '../assets/SIP Activity 2.jpg';
+import sipActivity3 from '../assets/SIP Activity 3.jpg';
+import sipActivity4 from '../assets/SIP Activity 4.jpg';
+import sipActivity5 from '../assets/SIP Activity 5.jpg';
+
 const MyActivities = () => {
   const activities = [
     {
-      title: "Activity Title One",
-      description: "Describe what this activity was about, your role, and what you learned or contributed during this experience.",
-      year: "2024",
+      title: "Activity One",
+      description: "This is the picture that I choose as my symbol. I choose this because it represents my personal growth and development as an Atenean and as a musician.",
+      year: "2026",
+      image: sipActivity1,
     },
     {
-      title: "Activity Title Two",
-      description: "Describe what this activity was about, your role, and what you learned or contributed during this experience.",
-      year: "2024",
+      title: "Activity Two",
+      description: "The pie chart that I created to represent my time management and productivity through the importance of music.",
+      year: "2026",
+      image: sipActivity2,
     },
     {
-      title: "Activity Title Three",
-      description: "Describe what this activity was about, your role, and what you learned or contributed during this experience.",
-      year: "2023",
+      title: "Activity Three",
+      description: "This table represents my attributes as a student.",
+      year: "2026",
+      image: sipActivity3,
     },
     {
-      title: "Activity Title Four",
-      description: "Describe what this activity was about, your role, and what you learned or contributed during this experience.",
-      year: "2023",
+      title: "Activity Four",
+      description: "This poem was created for my previous professor who was also a law student.",
+      year: "2026",
+      image: sipActivity4,
     },
     {
-      title: "Activity Title Five",
-      description: "Describe what this activity was about, your role, and what you learned or contributed during this experience.",
-      year: "2023",
+      title: "Activity Five",
+      description: "This was my journey map throughout college.",
+      year: "2026",
+      image: sipActivity5,
     },
-    {
-      title: "Activity Title Six",
-      description: "Describe what this activity was about, your role, and what you learned or contributed during this experience.",
-      year: "2022",
-    },
+    
   ];
 
   return (
@@ -95,7 +102,6 @@ const MyActivities = () => {
           padding: 0 3rem 100px;
         }
 
-        /* Row separator between every two rows */
         .activity-row {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -111,9 +117,29 @@ const MyActivities = () => {
           position: relative;
         }
 
-        /* Vertical divider between the two columns */
         .activity-card:first-child {
           border-right: 1px solid #d4cec7;
+        }
+
+        /* ── ACTIVITY IMAGE ── */
+        .activity-image-wrapper {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          overflow: hidden;
+          border-radius: 4px;
+          margin-bottom: 20px;
+        }
+
+        .activity-image-wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+
+        .activity-image-wrapper img:hover {
+          transform: scale(1.04);
         }
 
         .activity-number {
@@ -184,6 +210,11 @@ const MyActivities = () => {
             <div className="activity-row" key={rowIdx}>
               {activities.slice(rowIdx * 2, rowIdx * 2 + 2).map((activity, colIdx) => (
                 <div className="activity-card" key={colIdx}>
+                  {activity.image && (
+                    <div className="activity-image-wrapper">
+                      <img src={activity.image} alt={activity.title} />
+                    </div>
+                  )}
                   <p className="activity-number">0{rowIdx * 2 + colIdx + 1}</p>
                   <h2 className="activity-title">{activity.title}</h2>
                   <p className="activity-desc">{activity.description}</p>

@@ -201,7 +201,6 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><NavLink to="/" end>Home</NavLink></li>
           <li><NavLink to="/my-activities">My Activities</NavLink></li>
-          <li><NavLink to="/about-me">About Me</NavLink></li>
         </ul>
 
         {/* Hamburger for mobile */}
@@ -218,7 +217,6 @@ const Navbar = () => {
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
         <NavLink to="/my-activities" onClick={() => setMenuOpen(false)}>My Activities</NavLink>
-        <NavLink to="/about-me" onClick={() => setMenuOpen(false)}>About Me</NavLink>
       </div>
     </>
   )
