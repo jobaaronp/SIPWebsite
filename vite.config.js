@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/SIPWebsite/', // ⚠️ Replace with your actual GitHub repo name
+  base: 'https://github.com/jobaaronp/SIPWebsite', // ⚠️ Replace with your actual GitHub repo name
 })
