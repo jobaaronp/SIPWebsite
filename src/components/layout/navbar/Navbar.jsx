@@ -219,6 +219,8 @@ const Navbar = () => {
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
         <NavLink to="/my-activities" onClick={() => setMenuOpen(false)}>My Activities</NavLink>
+        <NavLink to="/my-passion-plan" onClick={() => setMenuOpen(false)}>My Passion Plan</NavLink>
+        <NavLink to="/my-journey-map" onClick={() => setMenuOpen(false)}>My Journey Map</NavLink>
       </div>
     </>
   )
