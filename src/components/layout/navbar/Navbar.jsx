@@ -201,6 +201,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><NavLink to="/" end>Home</NavLink></li>
           <li><NavLink to="/my-activities">My Activities</NavLink></li>
+          <li><NavLink to="/my-passion-plan">My Passion Plan</NavLink></li>
         </ul>
 
         {/* Hamburger for mobile */}
