@@ -4,6 +4,7 @@ import MyActivities from '../pages/MyActivities'
 import AboutMe from '../pages/AboutMe'
 import PassionPlan from '../pages/PassionPlan'
 import JourneyMap from '../pages/JourneyMap'
+import PersonalMissionStatement from '../pages/PersonalMissionStatement'
 const AppRoutes = () => {
   return (
     <Routes>
@@ -12,6 +13,8 @@ const AppRoutes = () => {
       <Route path="/about-me" element={<AboutMe />} />
       <Route path="/my-passion-plan" element={<PassionPlan />} />
       <Route path="/my-journey-map" element={<JourneyMap />} />
+      <Route path="/my-personal-mission-statement" element={<PersonalMissionStatement />} />
+
     </Routes>
   )
 }
